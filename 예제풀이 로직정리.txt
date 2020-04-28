@@ -1,29 +1,36 @@
 ﻿-Fly me to the Alpha Centauri(https://www.acmicpc.net/problem/1011)
-1 1 1*1
-2 2 1*1+1
+1 1 1*1		1
+2 2 1*1+1	2
 
-3 3,4 2*2
+3 3,4 2*2             4
 
-4 5,6 2*2+2
+4 5,6 2*2+2 오류   6
 
-5 7,8,9   3*3
+5 7,8,9   3*3 
 
-6 10,11,12 3*3+3
+6 10,11,12 3*3+3 오류
 
 7 13,14,15,16 4*4
 
 8 17,18,19,20 4*4+4
 
-int cont=0, , i=1, n=거리;
-while(comp<n){
-    if(i%2!=0){
-        cont++;
-        i=(cont+1/2)*(cont+1/2);
-    else{
-        cont++;
-        i=(cont/2)*(cont/2)+(cont/2);
-    }
+end-start*2-1
+end
+int start=입력, end=입력, cont(이동횟수)=0, comp(해당 반복 횟수의 마지막 숫자) 
+
+while(comp<end-start){
+        if(cont%2==0){
+	cont++;
+            comp=((cont+1)/2)*((cont+1)/2);
+        } else {
+            cont++;
+            comp=(cont/2)*(cont/2)+(cont/2);
+        }
 }
+
+
+
+
 
 -달팽이는 올라가고 싶다(https://www.acmicpc.net/problem/2869)
 day 1 +x -y;
